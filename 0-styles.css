@@ -1,0 +1,59 @@
+*, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+body ul{
+    height: 70vh;
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;;
+}
+
+body ul li{
+    text-align: center;
+    list-style: none;
+    width: 30%;
+    height: 90%;
+    border: 1px solid grey;
+    border-radius: 20px;
+    list-style: 200px;
+    font-size: 20px;
+    font-weight: bold;
+}
+body ul li:first-child{
+    background-image: url("images/sprite_languages.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+}
+body ul li + li{
+    background-image: url("images/sprite_languages.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+}
+body ul li:last-child{
+    background-image: url("images/sprite_languages.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    body ul{
+        height: 70vh;
+    }
+    body ul li{
+        width: 33%;
+        height: 70%;
+    }
+}

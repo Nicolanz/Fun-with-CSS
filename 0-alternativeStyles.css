@@ -30,13 +30,22 @@ body ul li{
     padding: 10px;
 }
 body ul li:first-child{
-    background: url("images/sprite_languages.png") -5% 20px;
+    background-image: url("images/sprite_languages.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
 }
 body ul li + li{
-    background: url("images/sprite_languages.png") 50% 20px;
+    background-image: url("images/sprite_languages.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
 }
 body ul li:last-child{
-    background: url("images/sprite_languages.png") 105% 20px;
+    background-image: url("images/sprite_languages.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
 }
 
 @media only screen and (max-width: 600px) {

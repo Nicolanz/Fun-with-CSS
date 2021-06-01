@@ -1,0 +1,19 @@
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #951B3B;
+}
+
+a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease; 
+}
+
+a:hover:after {
+    width: 100%;
+    background: #951B3B;
+}

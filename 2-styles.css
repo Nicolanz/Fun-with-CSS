@@ -1,0 +1,67 @@
+/* Hidden input */
+.toggle .toggle-cb{
+    display: none;
+}
+
+/* Styles the main box inside main .toggle div */
+.toggle .toggle-label{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: #c6c6c6;
+    color: white;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+}
+
+/* background red on cheked input */
+.toggle .toggle-cb:checked ~ .toggle-label{
+    background: red;
+}
+
+/* Syling content on checked or unchecked input */
+.toggle .toggle-cb:checked ~ .toggle-label .toggle-inner::after{
+    position: absolute;
+    margin-left: 115%;
+    top: 20%;
+    font-size: 20px;
+    content: 'Yes';
+}
+.toggle .toggle-label .toggle-switch::after{
+    position: relative;
+    margin-left: -90%;
+    top: 20%;
+    font-size: 20px;
+    content: 'No';
+}
+
+/* style boxes */
+.toggle .toggle-label div{
+    position: relative;
+    width: 40px;
+    height: 39px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: white;
+    border: 1px solid grey;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+/* Styling boxes on checked or unchecked input */
+.toggle .toggle-label .toggle-switch{
+    display: block;
+    margin-left: 60%;
+}
+.toggle .toggle-cb:checked ~ .toggle-label .toggle-switch{
+    display: none;
+}
+
+.toggle .toggle-label .toggle-inner{
+    display: none;
+}
+.toggle .toggle-cb:checked ~ .toggle-label .toggle-inner{
+    display: block;
+}

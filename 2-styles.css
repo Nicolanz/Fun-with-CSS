@@ -23,14 +23,14 @@
 /* Syling content on checked or unchecked input */
 .toggle .toggle-cb:checked ~ .toggle-label .toggle-inner::after{
     position: absolute;
-    margin-left: 115%;
+    margin-left: -90%;
     top: 20%;
     font-size: 20px;
     content: 'Yes';
 }
 .toggle .toggle-label .toggle-switch::after{
     position: relative;
-    margin-left: -90%;
+    margin-left: 120%;
     top: 20%;
     font-size: 20px;
     content: 'No';
@@ -51,9 +51,11 @@
 }
 
 /* Styling boxes on checked or unchecked input */
+.toggle .toggle-cb:checked ~ .toggle-label .toggle-inner{
+    margin-left: 60%;
+}
 .toggle .toggle-label .toggle-switch{
     display: block;
-    margin-left: 60%;
 }
 .toggle .toggle-cb:checked ~ .toggle-label .toggle-switch{
     display: none;

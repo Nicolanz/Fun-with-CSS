@@ -1,0 +1,86 @@
+/* Global container styes */
+.menu{
+    display: flex;
+    height: auto;
+    width: 15%;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    min-height: 100vh;
+    max-height: auto;
+    position: relative;
+    margin-top: 30px;
+}
+.menu .menu-open{
+    display: none;
+}
+.menu .menu-open-button{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: all .2s ease-out;
+}
+.menu .menu-open-button, .menu .menu-item{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(185, 11, 11, 0.945);
+    color: white;
+}
+
+/* style div lines and container */
+.menu .menu-open-button .menu-line{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all .2s ease-out;
+}
+.menu .menu-open-button .menu-line-1, .menu .menu-open-button .menu-line-3{
+    margin: 5px 0;
+}
+.menu .menu-open-button:hover{
+    width: 90px;
+    height: 90px;
+}
+.menu .menu-open:checked ~ .menu-open-button .menu-line-2{
+    display: none;
+}
+.menu .menu-open:checked ~ .menu-open-button .menu-line-1,
+.menu .menu-open:checked ~ .menu-open-button .menu-line-3{
+    margin: -1.5px 0;
+}
+.menu .menu-open:checked ~ .menu-open-button .menu-line-1{
+    transform: rotate(45deg);
+}
+.menu .menu-open:checked ~ .menu-open-button .menu-line-3{
+    transform: rotate(-45deg);
+}
+
+/* Style default buttons */
+.menu .menu-open-button + .menu-item{
+    margin-top: 105px;
+}
+.menu .menu-item{
+    border: 1px solid rgba(185, 11, 11, 0.945);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    display: none;
+}
+.menu .menu-item:hover{
+    background: white;
+    color:  rgba(185, 11, 11, 0.945);
+}
+
+/* styles of buttons on checked status */
+.menu .menu-open:checked ~ .menu-item{
+    display: flex;
+}
